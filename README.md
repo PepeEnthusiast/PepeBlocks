@@ -1,3 +1,6 @@
+# PepeBlocks
+Fork of eIquidus for the pepecoin blockchain.
+
 # eIquidus
 
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/team-exor/eiquidus?color=ffbd11&label=version)

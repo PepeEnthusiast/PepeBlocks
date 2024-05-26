@@ -102,6 +102,8 @@ block content
             if settings.richlist_page.show_received_coins == true
               li.nav-item(role='presentation')
                 a(class='nav-link' + (!settings.richlist_page.show_current_balance ? ' active' : ''), href='#received', aria-controls='received', role='tab', data-bs-toggle='tab') #{settings.locale.rl_received_coins}
+            li.nav-item(role='presentation')
+                a(class='nav-link' + (!settings.richlist_page.show_current_balance ? ' active' : ''), href='#claimedbalance', aria-controls='claimedbalance', role='tab', data-bs-toggle='tab') #{settings.locale.rl_claimed_balance}
         .tab-content
           if settings.richlist_page.show_current_balance == true
             #balance(class='container tab-pane' + (settings.richlist_page.show_current_balance == true ? ' active' : ''), style='margin-top:0;')
@@ -164,6 +166,39 @@ block content
                           include ./includes/rl_labels.pug
                         td.text-center #{itemFixedParts[0]}.
                           span.decimal #{itemFixedParts[1]}
+          if settings.richlist_page.show_current_balance == true
+            #claimedbalance(class='container tab-pane' + (!settings.richlist_page.show_current_balance == true ? ' active' : ''), style='margin-top:0;')
+              .card.card-default.border-0
+                table.table.table-hover.table-bordered.table-striped.summary-table.right-border-0(style='margin-bottom:0;', cellspacing='0')
+                  thead
+                    tr(class=theadClasses)
+                      th.text-center
+                        span.fa-solid.fa-flag-checkered
+                      th #{settings.locale.tx_address}
+                      th.text-center #{settings.locale.rl_balance}
+                        span.small.fw-normal  (#{settings.coin.symbol})
+                      th.text-center %
+                  tbody
+                    - var count = 0;
+                    each address in claimedbalance
+                      - count = count + 1;
+                      - var itemFixed = (parseInt(address.balance) / 100000000);
+                      - var itemFixedParts = Number(itemFixed).toLocaleString('en',{'minimumFractionDigits':2,'maximumFractionDigits':8,'useGrouping':true}).split(".");
+                      - var percent = Number((itemFixed / stats.supply) * 100).toLocaleString('en',{'minimumFractionDigits':2,'maximumFractionDigits':2,'useGrouping':false});
+                      - var percentParts = percent.split(".");
+                      tr
+                        td.text-center
+                          =count
+                        td
+                          if settings.claim_address_page.enabled == false || address.claim_name == null || address.claim_name == ''
+                            a.breakWord(href='/address/' + address.a_id) #{address.a_id}
+                          else
+                            a.breakWord(href='/address/' + address.a_id) #{address.claim_name}
+                          include ./includes/rl_labels.pug
+                        td.text-center #{itemFixedParts[0]}.
+                          span.decimal #{itemFixedParts[1]}
+                        td.text-center #{percentParts[0]}.
+                          span.decimal #{percentParts[1]}
     if settings.richlist_page.wealth_distribution.show_distribution_table == true || settings.richlist_page.wealth_distribution.show_distribution_chart == true
       div(class=(settings.richlist_page.show_received_coins == true || settings.richlist_page.show_current_balance == true ? 'col-xs-12 col-lg-4' : 'col-12'))
         if settings.richlist_page.wealth_distribution.show_distribution_table == true

@@ -68,7 +68,7 @@ function send_claimaddress_data(res, hash, claim_name) {
       customHash: get_custom_hash(),
       styleHash: get_style_hash(),
       themeHash: get_theme_hash(),
-      page_title_prefix: settings.coin.name + ' Claim Wallet Address' + (hash == null || hash == '' ? '' : ' ' + hash)
+      page_title_prefix: settings.coin.name + ' Wallet Address Claim' + (hash == null || hash == '' ? '' : ' ' + hash)
     }
   );
 }
@@ -290,7 +290,7 @@ function route_get_txlist(res, error) {
         customHash: get_custom_hash(),
         styleHash: get_style_hash(),
         themeHash: get_theme_hash(),
-        page_title_prefix: settings.coin.name + ' ' + 'Block Explorer'
+        page_title_prefix: settings.coin.name + ' ' + 'Transaction Explorer'
       }
     );
   });
@@ -446,6 +446,7 @@ router.get('/richlist', function(req, res) {
                 balance: richlist.balance,
                 received: richlist.received,
                 burned: richlist.burned,
+                claimedbalance: richlist.claimedbalance,
                 stats: stats,
                 dista: distribution.t_1_25,
                 distb: distribution.t_26_50,

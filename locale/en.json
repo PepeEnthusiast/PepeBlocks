@@ -36,10 +36,11 @@
   "menu_node": "Nodes",
   "menu_network": "Network",
   "menu_claim_address": "Claim Address",
+  "menu_mempool": "MemPool",
   "menu_orphans": "Orphaned Blocks",
 
   // explorer view
-  "ex_title": "{1} Block Explorer",
+  "ex_title": "{1} Transaction Explorer",
   "ex_description": "A listing of all verified {1} transactions",
   "ex_search_title": "Search",
   "ex_search_button": "Search",

@@ -3,8 +3,20 @@ html(lang='en')
   head
     meta(charset='UTF-8')
     meta(name='viewport' content='width=device-width, initial-scale=1')
+    meta(name='title' content='Pepecoin Block Explorer')
+    meta(name='description' content='Explore transactions, wallets, blocks, and real-time statistics on the Pepecoin network.')
+    meta(property='og:url' content='https://pepeblocks.com')
+    meta(property='og:type' content='website')
+    meta(property='og:title' content='Pepecoin Block Explorer')
+    meta(property='og:description' content='Explore transactions, wallets, blocks, and real-time statistics on the Pepecoin network.')
+    meta(name='twitter:card' content='summary_large_image')
+    meta(property='twitter:domain' content='pepeblocks.com')
+    meta(property='twitter:url' content='https://pepeblocks.com')
+    meta(name='twitter:title' content='Pepecoin Block Explorer')
+    meta(name='twitter:description' content='Explore transactions, wallets, blocks, and real-time statistics on the Pepecoin network.')
     meta(http-equiv='Content-Language', content='en')
-    title=(page_title_prefix == null || page_title_prefix == '' ? settings.locale.error_title.replace('{1}', settings.coin.name) : page_title_prefix) + ' - ' + settings.shared_pages.page_title
+    title=(page_title_prefix == null || page_title_prefix == '' ? settings.locale.error_title.replace('{1}', settings.coin.name) : page_title_prefix)
+    // + ' - ' + settings.shared_pages.page_title
     if settings.shared_pages.favicons.favicon32 != ''
       link(rel='icon', href='/' + settings.shared_pages.favicons.favicon32, sizes='32x32')
     if settings.shared_pages.favicons.favicon128 != ''
@@ -299,6 +311,9 @@ html(lang='en')
         update_block_and_connection_stats();
         fixFooterHeightAndPosition();
         enableTooltips();
+
+        // disable ajax datatables warning alerts
+        $.fn.dataTable.ext.errMode = 'throw';
       });
     if showPanels == true
       script.
@@ -1216,6 +1231,10 @@ html(lang='en')
                     a.nav-link(href='/claim')
                       span.fa-regular.fa-address-card
                       span.margin-left-5 #{settings.locale.menu_claim_address}
+                li#mempool.nav-item
+                    a.nav-link(href='https://trezor.pepeblocks.com/mempool' target='_self')
+                      span.fa-solid.fa-memory
+                      span.margin-left-5 #{settings.locale.menu_mempool}
                 if settings.orphans_page.enabled == true
                   li#orphans.nav-item
                     a.nav-link(href='/orphans')
@@ -1333,6 +1352,10 @@ html(lang='en')
                   a.nav-link(href='/claim')
                     span.nav-icon.fa-regular.fa-address-card
                     span.margin-left-5 #{settings.locale.menu_claim_address}
+              li#mempool.nav-item(alt=settings.locale.menu_mempool, title=settings.locale.menu_mempool, data-bs-toggle='tooltip', data-bs-placement='right')
+                  a.nav-link(href='https://trezor.pepeblocks.com/mempool' target='_blank')
+                    span.nav-icon.fa-solid.fa-memory
+                    span.margin-left-5 #{settings.locale.menu_mempool}
               if settings.orphans_page.enabled == true
                 li#orphans.nav-item(alt=settings.locale.menu_orphans, title=settings.locale.menu_orphans, data-bs-toggle='tooltip', data-bs-placement='right')
                   a.nav-link(href='/orphans')

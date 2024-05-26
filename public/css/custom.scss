@@ -1,1 +1,20 @@
 /* Add custom css rules here */
+
+$pepe-primary:#55883a !default;
+
+.bg-primary
+{
+    background: $pepe-primary !important;
+    background-color: $pepe-primary !important;
+}
+
+#side-nav-bar.bg-primary
+{
+    background: $pepe-primary !important;
+    background-color: $pepe-primary !important;
+}
+
+.page-item.active .page-link
+{
+    background-color: $pepe-primary !important;
+}

@@ -1447,10 +1447,12 @@ if (lib.is_locked([database]) == false) {
                           console.log('Richlist updated received');
 
                           db.update_richlist('balance', function() {
-                            // update richlist_last_updated value
-                            db.update_last_updated_stats(settings.coin.name, { richlist_last_updated: Math.floor(new Date() / 1000) }, function(cb) {
-                              console.log('Richlist update complete');
-                              exit(0);
+                            db.update_richlist('claimedbalance', function() {
+                              // update richlist_last_updated value
+                              db.update_last_updated_stats(settings.coin.name, { richlist_last_updated: Math.floor(new Date() / 1000) }, function(cb) {
+                                console.log('Richlist update complete');
+                                exit(0);
+                              });
                             });
                           });
                         });
@@ -1570,8 +1572,8 @@ if (lib.is_locked([database]) == false) {
                     db.create_peer({
                       address: address,
                       port: port,
-                      protocol: peer.protocol,
-                      version: peer.version,
+                      protocol: body[i].version,
+                      version: body[i].subver.replace('/', '').replace('/', ''),
                       country: peer.country,
                       country_code: peer.country_code
                     }, function() {
