@@ -551,7 +551,7 @@
       "social_link_percent_height_mobile": 40,
       // powered_by_text: Customize the "powered by" text in the center of the footer with some custom html
       //                  NOTE: Add the keyword {explorer_version} to display the current version number of the explorer
-      "powered_by_text": "PepeBlocks.com - <a href='https://pepeblocks.com/address/PpB1ocks3ozcti7m5a3i2wViSuFAchLm3n' style='display: inline; color: #000000;'><code class='wallet-code text-center active ptr' style='padding: 4px 9px;'>PpB1ocks3oz...</code></a>"
+      "powered_by_text": "PepeBlocks.com - <a href='https://pepeblocks.com/address/PpB1ocks3ozcti7m5a3i2wViSuFAchLm3n' style='display: inline; color: #000000;'><code class='wallet-code text-center active ptr' style='text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; list-style: none; box-sizing: border-box; direction: ltr; font-family: var(--bs-font-monospace); unicode-bidi: bidi-override; font-size: 0.875em; overflow-wrap: break-word; text-align: center !important; cursor: pointer; transition: all 0.175s ease-in-out 0s; color: rgb(238, 238, 238) !important; background-color: rgba(0, 0, 0, 0.14); border-radius: 5px; display: block; margin-bottom: 1px; width: 100%; opacity: 0.8; padding: 4px 9px;'>PpB1ocks3oz...</code></a>"
     }
   },
 
