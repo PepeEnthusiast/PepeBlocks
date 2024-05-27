@@ -428,21 +428,7 @@
         {
           // enabled: Enable/disable this particular social link (true/false)
           //          If set to false, the link will be completely inaccessible
-          "enabled": true,
-          // tooltip_text: Social link tooltips are always prefixed by the "coin.name" setting followed by the text from this tooltip_text setting. Ex: Exor Github
-          "tooltip_text": "Github",
-          // url: The exact url that the social link should navigate to
-          "url": "https://github.com/pepecoinppc/pepecoin",
-          // fontawesome_class: A string of css classes, separated by spaces that can be used to display a fontawesome icon for this social link. See https://fontawesome.com/ for more info
-          "fontawesome_class": "",
-          // image_path: The path to an image file that will be displayed for this social link
-          //             NOTE: The path root is /public
-          "image_path": "/img/github-32.png"
-        },
-        {
-          // enabled: Enable/disable this particular social link (true/false)
-          //          If set to false, the link will be completely inaccessible
-          "enabled": true,
+          "enabled": false,
           // tooltip_text: Social link tooltips are always prefixed by the "coin.name" setting followed by the text from this tooltip_text setting. Ex: Exor Twitter
           "tooltip_text": "X (Twitter)",
           // url: The exact url that the social link should navigate to
@@ -456,21 +442,7 @@
         {
           // enabled: Enable/disable this particular social link (true/false)
           //          If set to false, the link will be completely inaccessible
-          "enabled": true,
-          // tooltip_text: Social link tooltips are always prefixed by the "coin.name" setting followed by the text from this tooltip_text setting. Ex: Exor Discord
-          "tooltip_text": "Discord",
-          // url: The exact url that the social link should navigate to
-          "url": "https://pepecoin.org/discord",
-          // fontawesome_class: A string of css classes, separated by spaces that can be used to display a fontawesome icon for this social link. See https://fontawesome.com/ for more info
-          "fontawesome_class": "",
-          // image_path: The path to an image file that will be displayed for this social link
-          //             NOTE: The path root is /public
-          "image_path": "/img/discord-32.png"
-        },
-        {
-          // enabled: Enable/disable this particular social link (true/false)
-          //          If set to false, the link will be completely inaccessible
-          "enabled": true,
+          "enabled": false,
           // tooltip_text: Social link tooltips are always prefixed by the "coin.name" setting followed by the text from this tooltip_text setting. Ex: Exor Telegram
           "tooltip_text": "Telegram",
           // url: The exact url that the social link should navigate to
@@ -484,21 +456,7 @@
         {
           // enabled: Enable/disable this particular social link (true/false)
           //          If set to false, the link will be completely inaccessible
-          "enabled": true,
-          // tooltip_text: Social link tooltips are always prefixed by the "coin.name" setting followed by the text from this tooltip_text setting. Ex: Exor Website
-          "tooltip_text": "Website",
-          // url: The exact url that the social link should navigate to
-          "url": "https://pepecoin.org/",
-          // fontawesome_class: A string of css classes, separated by spaces that can be used to display a fontawesome icon for this social link. See https://fontawesome.com/ for more info
-          "fontawesome_class": "",
-          // image_path: The path to an image file that will be displayed for this social link
-          //             NOTE: The path root is /public
-          "image_path": "/img/pepecoinlogo-32.webp"
-        },
-        {
-          // enabled: Enable/disable this particular social link (true/false)
-          //          If set to false, the link will be completely inaccessible
-          "enabled": true,
+          "enabled": false,
           // tooltip_text: Social link tooltips are always prefixed by the "coin.name" setting followed by the text from this tooltip_text setting. Ex: Exor Coingecko
           "tooltip_text": "Coingecko",
           // url: The exact url that the social link should navigate to
@@ -512,7 +470,7 @@
         {
           // enabled: Enable/disable this particular social link (true/false)
           //          If set to false, the link will be completely inaccessible
-          "enabled": true,
+          "enabled": false,
           // tooltip_text: Social link tooltips are always prefixed by the "coin.name" setting followed by the text from this tooltip_text setting. Ex: Exor Website
           "tooltip_text": "Mining Pool",
           // url: The exact url that the social link should navigate to
@@ -526,7 +484,7 @@
         {
           // enabled: Enable/disable this particular social link (true/false)
           //          If set to false, the link will be completely inaccessible
-          "enabled": true,
+          "enabled": false,
           // tooltip_text: Social link tooltips are always prefixed by the "coin.name" setting followed by the text from this tooltip_text setting. Ex: Exor Website
           "tooltip_text": "MiningPoolStats",
           // url: The exact url that the social link should navigate to
@@ -536,6 +494,48 @@
           // image_path: The path to an image file that will be displayed for this social link
           //             NOTE: The path root is /public
           "image_path": "/img/miningpoolstats-32.webp"
+        },
+        {
+          // enabled: Enable/disable this particular social link (true/false)
+          //          If set to false, the link will be completely inaccessible
+          "enabled": true,
+          // tooltip_text: Social link tooltips are always prefixed by the "coin.name" setting followed by the text from this tooltip_text setting. Ex: Exor Website
+          "tooltip_text": "Pepecoin Official Website",
+          // url: The exact url that the social link should navigate to
+          "url": "https://pepecoin.org/",
+          // fontawesome_class: A string of css classes, separated by spaces that can be used to display a fontawesome icon for this social link. See https://fontawesome.com/ for more info
+          "fontawesome_class": "",
+          // image_path: The path to an image file that will be displayed for this social link
+          //             NOTE: The path root is /public
+          "image_path": "/img/pepecoinlogo-32.webp"
+        },
+        {
+          // enabled: Enable/disable this particular social link (true/false)
+          //          If set to false, the link will be completely inaccessible
+          "enabled": true,
+          // tooltip_text: Social link tooltips are always prefixed by the "coin.name" setting followed by the text from this tooltip_text setting. Ex: Exor Discord
+          "tooltip_text": "Pepecoin Official Discord",
+          // url: The exact url that the social link should navigate to
+          "url": "https://pepecoin.org/discord",
+          // fontawesome_class: A string of css classes, separated by spaces that can be used to display a fontawesome icon for this social link. See https://fontawesome.com/ for more info
+          "fontawesome_class": "",
+          // image_path: The path to an image file that will be displayed for this social link
+          //             NOTE: The path root is /public
+          "image_path": "/img/discord-32.png"
+        },
+        {
+          // enabled: Enable/disable this particular social link (true/false)
+          //          If set to false, the link will be completely inaccessible
+          "enabled": true,
+          // tooltip_text: Social link tooltips are always prefixed by the "coin.name" setting followed by the text from this tooltip_text setting. Ex: Exor Github
+          "tooltip_text": "PepeBlocks Github",
+          // url: The exact url that the social link should navigate to
+          "url": "https://github.com/PepeEnthusiast/PepeBlocks",
+          // fontawesome_class: A string of css classes, separated by spaces that can be used to display a fontawesome icon for this social link. See https://fontawesome.com/ for more info
+          "fontawesome_class": "",
+          // image_path: The path to an image file that will be displayed for this social link
+          //             NOTE: The path root is /public
+          "image_path": "/img/github-32.png"
         }
       ],
       // Customize the height of the social media links in the footer for the following screen sizes:
@@ -551,7 +551,7 @@
       "social_link_percent_height_mobile": 40,
       // powered_by_text: Customize the "powered by" text in the center of the footer with some custom html
       //                  NOTE: Add the keyword {explorer_version} to display the current version number of the explorer
-      "powered_by_text": "PepeBlocks.com - Hosted by <a href='/address/Pps2nuEbFRtWeYPpELAdrgvK6QekEayvk8' style='display: inline; color: #000000;'>realmasterkush</a>"
+      "powered_by_text": "PepeBlocks.com - <a href='https://pepeblocks.com/address/PpB1ocks3ozcti7m5a3i2wViSuFAchLm3n' style='display: inline; color: #000000;'><code class='wallet-code text-center active ptr' style='padding: 4px 9px;'>PpB1ocks3oz...</code></a>"
     }
   },
 

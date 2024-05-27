@@ -102,7 +102,7 @@ block content
             if settings.richlist_page.show_received_coins == true
               li.nav-item(role='presentation')
                 a(class='nav-link' + (!settings.richlist_page.show_current_balance ? ' active' : ''), href='#received', aria-controls='received', role='tab', data-bs-toggle='tab') #{settings.locale.rl_received_coins}
-            li.nav-item(role='presentation')
+            //li.nav-item(role='presentation')
                 a(class='nav-link' + (!settings.richlist_page.show_current_balance ? ' active' : ''), href='#claimedbalance', aria-controls='claimedbalance', role='tab', data-bs-toggle='tab') #{settings.locale.rl_claimed_balance}
         .tab-content
           if settings.richlist_page.show_current_balance == true

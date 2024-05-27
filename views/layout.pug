@@ -1235,6 +1235,10 @@ html(lang='en')
                     a.nav-link(href='https://trezor.pepeblocks.com/mempool' target='_self')
                       span.fa-solid.fa-memory
                       span.margin-left-5 #{settings.locale.menu_mempool}
+                li#wallet.nav-item
+                    a.nav-link(href='https://wallet.pepeblocks.com/' target='_self')
+                      span.fa-solid.fa-wallet
+                      span.margin-left-5 #{settings.locale.menu_wallet}
                 if settings.orphans_page.enabled == true
                   li#orphans.nav-item
                     a.nav-link(href='/orphans')
@@ -1356,6 +1360,10 @@ html(lang='en')
                   a.nav-link(href='https://trezor.pepeblocks.com/mempool' target='_blank')
                     span.nav-icon.fa-solid.fa-memory
                     span.margin-left-5 #{settings.locale.menu_mempool}
+              li#wallet.nav-item(alt=settings.locale.menu_wallet, title=settings.locale.menu_wallet, data-bs-toggle='tooltip', data-bs-placement='right')
+                  a.nav-link(href='https://wallet.pepeblocks.com/' target='_blank')
+                    span.nav-icon.fa-solid.fa-wallet
+                    span.margin-left-5 #{settings.locale.menu_wallet}
               if settings.orphans_page.enabled == true
                 li#orphans.nav-item(alt=settings.locale.menu_orphans, title=settings.locale.menu_orphans, data-bs-toggle='tooltip', data-bs-placement='right')
                   a.nav-link(href='/orphans')
@@ -1429,7 +1437,7 @@ html(lang='en')
           each social in settings.shared_pages.page_footer.social_links
             if social.enabled
               li.float-start
-                a.nav-link.social-link.border-0(href=social.url, target='_blank', alt=settings.coin.name + ' ' + social.tooltip_text, title=settings.coin.name + ' ' + social.tooltip_text, data-bs-toggle='tooltip', data-bs-placement='top')
+                a.nav-link.social-link.border-0(href=social.url, target='_blank', alt=social.tooltip_text, title=social.tooltip_text, data-bs-toggle='tooltip', data-bs-placement='top')
                   if social.fontawesome_class != null && social.fontawesome_class != ''
                     span(class='vertical-align-middle ' + social.fontawesome_class)
                   else
