@@ -79,7 +79,7 @@
     //       NOTE: This value acts as a unique identifier for data stored in mongo and therefore cannot be changed without re-syncing all existing data.
     "name": "Pepecoin",
     // symbol: The cryptocurrency coin ticker/symbol value. This value is displayed anywhere that coin data is displayed including the index, address, block, movement, reward, richlist/top100 and tx pages
-    "symbol": "PEPENET"
+    "symbol": "PEP"
   },
 
   // network_history: a collection of settings that controls saving of extra historical network data during a block sync
@@ -1013,7 +1013,7 @@
         //                You can add as many trading pairs as necessary
         //                All entries must specify your coins symbol as it is displayed on the exchange, followed by a slash (/) and ending with the symbol of the market or asset that is being traded against
         //                Ex: "LTC/BTC", "LTC/USDT", "LTC/ETH"
-        "trading_pairs": [ "PEPENET/USDT" ]
+        "trading_pairs": [ "PEP/USDT" ]
       },
       // yobit: a collection of settings that pertain to the yobit exchange
       //        NOTE: yobit does not display a 24-hour chart due to a lack of OHLCV api data
@@ -1053,7 +1053,7 @@
       //                See the list of supported exchanges above for the list of supported exchange names
       "exchange_name": "xeggex",
       // trading_pair: The name of the trading pair for the default exchange must exactly match the name of a trading pair from the "exchanges" setting above
-      "trading_pair": "PEPENET/USDT"
+      "trading_pair": "PEP/USDT"
     }
   },
 
@@ -1449,7 +1449,7 @@
       "type": "success",
       // url: The url the label should navigate to when clicked. Ex: http://example.com
       //      NOTE: Leave the value blank ( "" ) to prevent hyperlinking the label
-      "url": "https://xeggex.com/market/PEPENET_USDT"
+      "url": "https://xeggex.com/market/PEP_USDT"
     },
     "PgRLcaCTEkXSguu6ZgzkuncHdCxADmPBXP": {
       // enabled: Enable/disable this particular wallet address label (true/false)
