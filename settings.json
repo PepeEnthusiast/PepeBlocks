@@ -122,7 +122,7 @@
     //       This logo can also be displayed in the header when the "shared_pages.page_header.home_link" setting is set to "logo" and the "shared_pages.page_header.home_link_logo" setting is blank or an invalid file
     //       NOTE: The path root is /public
     //             The optimum logo size is 128x128 as the image will be forced to 128px high when displayed
-    "logo": "/img/pepecoinlogo.svg",
+    "logo": "/img/pepecoin.png",
     // date_time: a collection of settings that pertain to the date and time values displayed in the explorer
     "date_time": {
       // display_format: The format to use when displaying date/time values
@@ -174,7 +174,7 @@
       // home_link_logo: The path to a logo image that is displayed on page header when the "shared_pages.page_header.home_link" setting is set to "logo"
       //                 If the home_link_logo is left blank or not set to a valid file, the "shared_pages.page_header.home_link" = "logo" setting will automatically default to displaying the original "shared_pages.logo" instead of the "shared_pages.page_header.home_link_logo"
       //                 NOTE: The path root is /public
-      "home_link_logo": "/img/pepecoinlogo.svg",
+      "home_link_logo": "/img/pepecoin.png",
       // home_link_logo_height: The max-height value of the "shared_pages.page_header.home_link" logo image (value in px, only valid if "shared_pages.page_header.home_link" = 'logo')
       "home_link_logo_height": 50,
       // panels: a collection of settings that pertain to the panels displayed on page header of all pages (NOTE: you can show/hide the entire group of panels on each page independently by changing the show_panels value in the settings for each page)
@@ -330,7 +330,7 @@
         // image_path: The path to an image file that is displayed in the header section of all pages next to the page title (NOTE: This image can be enabled/disabled on a per-page basis)
         //             NOTE: The path root is /public
         //             The optimum logo size is 48x48 as the image will be forced to this size when displayed
-        "image_path": "/img/pepecoinlogo.svg",
+        "image_path": "/img/pepecoin.png",
         // enable_animation: Enable/disable the flip/spin animation on the page title image (true/false)
         "enable_animation": true
       },
