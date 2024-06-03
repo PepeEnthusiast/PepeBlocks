@@ -306,7 +306,7 @@ html(lang='en')
 
         setInterval(function() {
           update_block_and_connection_stats();
-        }, 60000);
+        }, 2000);
 
         update_block_and_connection_stats();
         fixFooterHeightAndPosition();
@@ -314,6 +314,7 @@ html(lang='en')
 
         // disable ajax datatables warning alerts
         $.fn.dataTable.ext.errMode = 'throw';
+
       });
     if showPanels == true
       script.
@@ -325,6 +326,7 @@ html(lang='en')
             });
           }
         }
+
         function getNetworkPanel() {
           return '<div class="card-header"><strong>#{settings.locale.network} <span class="small fw-normal">' + getNetHashUnits() + '</span></strong></div><div class="card-body"><div id="hashratePanelLoading" class="header-panel"><i class="fa-solid fa-spinner fa-spin-pulse"></i></div><div id="hashratepanel" class="header-panel" style="display:none;"><span class="fa-solid fa-gears"></span><label id="hashrate"></label></div></div>';
         }
@@ -338,6 +340,9 @@ html(lang='en')
         }
         function getCoinSupplyPanel() {
           return `<div class="card-header"><strong>#{settings.locale.ex_supply} <span class="small fw-normal">(${"#{settings.coin.symbol}".replace(/"/g, '&quot;')})</span></strong></div><div class="card-body"><div id="supplyPanelLoading" class="header-panel"><i class="fa-solid fa-spinner fa-spin-pulse"></i></div><div id="supplypanel" class="header-panel" style="display:none;"><span class="fa-solid fa-chart-pie"></span><label id="supply"></label></div></div>`;
+        }
+        function getNextHalvingCountdownPanel() {
+          return '<div class="card-header"><strong>Next Halving</strong></div><div class="card-body"><div id="halvingPanelLoading" class="header-panel"><i class="fa-solid fa-spinner fa-spin-pulse"></i></div><div id="halvingpanel" class="header-panel" style="display:none;"><span class="fa-solid fa-rocket"></span><label id="nextHalvingTime">-</label></div></div>';
         }
         function getPricePanel() {
           return '<div class="card-header"><strong>Price <span class="small fw-normal">(#{market_currency})</span></strong></div><div class="card-body"><div id="pricePanelLoading" class="header-panel"><i class="fa-solid fa-spinner fa-spin-pulse"></i></div><div id="pricepanel" class="header-panel" style="display:none;"><span class="fa-solid fa-rocket"></span><label id="lastPrice">-</label></div></div>';
@@ -376,6 +381,9 @@ html(lang='en')
             case "price_panel":
               sReturn = getPricePanel();
               break;
+            case "halving_panel":
+              sReturn = getNextHalvingCountdownPanel();
+              break;
             case "usd_price_panel":
               sReturn = getUSDPricePanel();
               break;
@@ -409,10 +417,39 @@ html(lang='en')
             }
           }
         }
+
+        function formatTime(minutes) {
+            const days = Math.floor(minutes / (24 * 60));
+            const hours = Math.floor((minutes % (24 * 60)) / 60);
+            const mins = minutes % 60;
+
+            let result = '';
+            if (days > 0) result += `${days}d `;
+            if (hours > 0 || days > 0) result += `${hours}h `;
+            result += `${mins}m`;
+
+            return result.trim();
+        }
+
         function update_stats() {
           const summary_headers = {
             Accept: 'application/json, text/javascript, */*; q=0.01'
           };
+          
+          const summary_headers_2 = {
+            Accept: 'application/json, text/javascript, */*; q=0.01',
+            'footer-only': 'true'
+          };
+
+          $.ajax({url: '/ext/getsummary', headers: summary_headers_2, success: function(json) {
+            let currentBlock = Number(json.blockcount);
+            let remainingBlocks = 100000 - Number(json.blockcount);
+            let formattedTime = formatTime(remainingBlocks);
+
+            $("#nextHalvingTime").html(formattedTime);
+            showTopPanelData('halvingpanel', 'halvingPanelLoading');
+
+          }});
 
           $.ajax({url: '/ext/getsummary', headers: summary_headers, success: function(json) {
             if (json.masternodeCountOnline == null)
@@ -494,7 +531,7 @@ html(lang='en')
 
           setInterval(function() {
             update_stats();
-          }, 60000);
+          }, 1000);
 
           update_stats();
         });

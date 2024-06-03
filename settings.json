@@ -206,7 +206,7 @@
         "difficulty_panel": {
           // enabled: Enable/disable the difficulty panel (true/false)
           //          If set to false, the difficulty panel will be completely inaccessible
-          "enabled": true,
+          "enabled": false,
           // display_order: Determine which order this panel is shown from 1-5
           //                1 = far left panel, 5 = far right panel
           //                The panel will be disabled with a value of 0
@@ -241,6 +241,16 @@
           //                1 = far left panel, 5 = far right panel
           //                The panel will be disabled with a value of 0
           "display_order": 0
+        },
+        // halving_panel: a collection of settings that pertain to the halving panel which displays the next halving countdown timer
+        "halving_panel": {
+          // enabled: Enable/disable the halving panel (true/false)
+          //          If set to false, the halving panel will be completely inaccessible
+          "enabled": true,
+          // display_order: Determine which order this panel is shown from 1-5
+          //                1 = far left panel, 5 = far right panel
+          //                The panel will be disabled with a value of 0
+          "display_order": 3
         },
         // usd_price_panel: a collection of settings that pertain to the usd price panel which displays the current market price measured in USD
         "usd_price_panel": {
