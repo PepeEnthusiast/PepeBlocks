@@ -887,9 +887,9 @@
       // show_description: Determine whether to show the page description as defined in "locale.rl_description" (true/false)
       "show_description": true
     },
-    // show_current_balance: Determine whether to show the top 100 list of wallet addresses that currently have the most coins in a single wallet (true/false)
+    // show_current_balance: Determine whether to show the top 500 list of wallet addresses that currently have the most coins in a single wallet (true/false)
     "show_current_balance": true,
-    // show_received_coins: Determine whether to show the top 100 list of wallet addresses that have the highest total number of coins received based on adding up all received transactions (true/false)
+    // show_received_coins: Determine whether to show the top 500 list of wallet addresses that have the highest total number of coins received based on adding up all received transactions (true/false)
     "show_received_coins": true,
     // wealth_distribution: a collection of settings that pertain to the wealth distribution section of the richlist/top100 page
     //                      This section features a summary table with the breakdown of coins owned by the top 1-25, 26-50, 51-75, 76-100, 101+ wallets and all burned coins plus an associated pie chart

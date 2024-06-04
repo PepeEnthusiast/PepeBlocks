@@ -438,29 +438,36 @@ router.get('/richlist', function(req, res) {
     db.get_stats(settings.coin.name, function (stats) {
       db.get_richlist(settings.coin.name, function(richlist) {
         if (richlist) {
-          db.get_distribution(richlist, stats, function(distribution) {
-            res.render(
-              'richlist',
-              {
-                active: 'richlist',
-                balance: richlist.balance,
-                received: richlist.received,
-                burned: richlist.burned,
-                claimedbalance: richlist.claimedbalance,
-                stats: stats,
-                dista: distribution.t_1_25,
-                distb: distribution.t_26_50,
-                distc: distribution.t_51_75,
-                distd: distribution.t_76_100,
-                diste: distribution.t_101plus,
-                last_updated: (settings.richlist_page.page_header.show_last_updated == true ? stats.richlist_last_updated : null),
-                showSync: db.check_show_sync_message(),
-                customHash: get_custom_hash(),
-                styleHash: get_style_hash(),
-                themeHash: get_theme_hash(),
-                page_title_prefix: 'Top ' + settings.coin.name + ' Coin Holders'
-              }
-            );
+          db.get_distribution_excluding_labelled(richlist, stats, function(distribution_b) {
+            db.get_distribution(richlist, stats, function(distribution) {
+              res.render(
+                'richlist',
+                {
+                  active: 'richlist',
+                  balance: richlist.balance,
+                  received: richlist.received,
+                  burned: richlist.burned,
+                  claimedbalance: richlist.claimedbalance,
+                  stats: stats,
+                  dista: distribution.t_1_25,
+                  distb: distribution.t_26_50,
+                  distc: distribution.t_51_75,
+                  distd: distribution.t_76_100,
+                  diste: distribution.t_101plus,
+                  distba: distribution_b.t_1_25,
+                  distbb: distribution_b.t_26_50,
+                  distbc: distribution_b.t_51_75,
+                  distbd: distribution_b.t_76_100,
+                  distbe: distribution_b.t_101plus,
+                  last_updated: (settings.richlist_page.page_header.show_last_updated == true ? stats.richlist_last_updated : null),
+                  showSync: db.check_show_sync_message(),
+                  customHash: get_custom_hash(),
+                  styleHash: get_style_hash(),
+                  themeHash: get_theme_hash(),
+                  page_title_prefix: 'Top ' + settings.coin.name + ' Coin Holders'
+                }
+              );
+            });
           });
         } else {
           // richlist data not found so default to the tx list page

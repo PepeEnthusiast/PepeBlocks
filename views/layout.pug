@@ -443,8 +443,14 @@ html(lang='en')
 
           $.ajax({url: '/ext/getsummary', headers: summary_headers_2, success: function(json) {
             let currentBlock = Number(json.blockcount);
-            let remainingBlocks = 100000 - Number(json.blockcount);
+            let nextHalvingBlock = (currentBlock - (currentBlock % 100000)) + 100000;
+            console.log('nextHalvingBlock: ' + nextHalvingBlock)
+            let remainingBlocks = nextHalvingBlock - Number(json.blockcount);
             let formattedTime = formatTime(remainingBlocks);
+
+            if(nextHalvingBlock > 600000) {
+              formattedTime = '∞';
+            }
 
             $("#nextHalvingTime").html(formattedTime);
             showTopPanelData('halvingpanel', 'halvingPanelLoading');
