@@ -77,9 +77,9 @@
   "coin": {
     // name: Name of the cryptocurrency coin being explored. This value is displayed in the page header when the "shared_pages.page_header.home_link" setting is set to "coin".
     //       NOTE: This value acts as a unique identifier for data stored in mongo and therefore cannot be changed without re-syncing all existing data.
-    "name": "Pepecoin",
+    "name": "Pepecoin Testnet",
     // symbol: The cryptocurrency coin ticker/symbol value. This value is displayed anywhere that coin data is displayed including the index, address, block, movement, reward, richlist/top100 and tx pages
-    "symbol": "PEP"
+    "symbol": "PEPETEST"
   },
 
   // network_history: a collection of settings that controls saving of extra historical network data during a block sync
@@ -200,13 +200,13 @@
           //                M: Display value in megahashes (MH/s)
           //                K: Display value in kilohashes (KH/s)
           //                H: Display value in hashes (H/s)
-          "nethash_units": "T"
+          "nethash_units": "K"
         },
         // difficulty_panel: a collection of settings that pertain to the difficulty panel which displays the current proof-of-work difficulty (only applicable to POW coins)
         "difficulty_panel": {
           // enabled: Enable/disable the difficulty panel (true/false)
           //          If set to false, the difficulty panel will be completely inaccessible
-          "enabled": false,
+          "enabled": true,
           // display_order: Determine which order this panel is shown from 1-5
           //                1 = far left panel, 5 = far right panel
           //                The panel will be disabled with a value of 0
@@ -246,7 +246,7 @@
         "halving_panel": {
           // enabled: Enable/disable the halving panel (true/false)
           //          If set to false, the halving panel will be completely inaccessible
-          "enabled": true,
+          "enabled": false,
           // display_order: Determine which order this panel is shown from 1-5
           //                1 = far left panel, 5 = far right panel
           //                The panel will be disabled with a value of 0
@@ -256,7 +256,7 @@
         "usd_price_panel": {
           // enabled: Enable/disable the usd price panel (true/false)
           //          If set to false, the usd price panel will be completely inaccessible
-          "enabled": true,
+          "enabled": false,
           // display_order: Determine which order this panel is shown from 1-5
           //                1 = far left panel, 5 = far right panel
           //                The panel will be disabled with a value of 0
@@ -276,7 +276,7 @@
         "usd_market_cap_panel": {
           // enabled: Enable/disable the usd market cap panel (true/false)
           //          If set to false, the usd market cap panel will be completely inaccessible
-          "enabled": true,
+          "enabled": false,
           // display_order: Determine which order this panel is shown from 1-5
           //                1 = far left panel, 5 = far right panel
           //                The panel will be disabled with a value of 0
@@ -620,7 +620,7 @@
     // genesis_block: Your coins genesis block hash is used to determine the beginning of the blockchain
     //                For many bitcoin clones you can use the following cmd to get the block hash of the genesis block: coin-cli getblockhash 0
     //                NOTE: If this value is not entered correctly it will not be possible for the explorer to find or navigate to the genesis block, neither via block or transaction hash
-    "genesis_block": "37981c0c48b8d48965376c8a42ece9a0838daadb93ff975cb091f57f8c2a5faa",
+    "genesis_block": "f9f4ea4ae7f6ea4c55040ede2019ba0a53e262f46ec9bce3dcda2cb11f96fc52",
     // multi_algorithm: a collection of settings that can be used to show a new column with the hash algorithm that was used to mine a particular block for multi-algo coins
     //                  If enabled, a new column will be displayed on the block page and main transaction homepage that displays the hash algorithm used to mine a particular block or tx
     //                  NOTE: Changing any of the options in this section will require a full reindex of the blockchain data before previously synced blocks can display the algorithm
@@ -654,10 +654,10 @@
     // genesis_tx: Your coins genesis transaction hash is used to determine the beginning of the blockchain
     //             For many bitcoin clones you can use the following cmd to find the list of transaction hashes from the genesis block: coin-cli getblock 00014f36c648cdbc750f7dd28487a23cd9e0b0f95f5fccc5b5d01367e3f57469
     //             NOTE: If this value is not entered correctly it will not be possible for the explorer to find or navigate to the genesis block by searching for the genesis transaction hash
-    "genesis_tx": "0ebbfaaf838cde7cf27b103bfbc15261602188ab63384dac2922c115bea1471f",
+    "genesis_tx": "d22a1ba59a39cbd5904624933efb822c8baa121f97060c4cc9ea2f00a4bc6512",
     // show_op_return: Determine whether to decode and show OP_RETURN values that may have been embeddeded in a transaction
     //                 NOTE: Enabling this option will require a full reindex of the blockchain data before previously synced transactions can display the OP_RETURN value
-    "show_op_return": false
+    "show_op_return": true
   },
 
   // address_page: a collection of settings that pertain to the address page
@@ -755,7 +755,7 @@
   "movement_page": {
     // enabled: Enable/disable the movement page (true/false)
     //          If set to false, the movement page will be completely inaccessible
-    "enabled": true,
+    "enabled": false,
     // show_panels: Determine whether to show the panels configured in the shared_pages.page_header section across the top of this page (true/false)
     "show_panels": false,
     // show_nethash_chart: Determine whether to show the network hashrate chart configured in the shared_pages.network_charts.nethash_chart section across the top of this page (true/false)
@@ -924,7 +924,7 @@
   "markets_page": {
     // enabled: Enable/disable the markets pages (true/false)
     //          If set to false, all market pages will be completely inaccessible
-    "enabled": true,
+    "enabled": false,
     // show_panels: Determine whether to show the panels configured in the shared_pages.page_header section across the top of this page (true/false)
     "show_panels": false,
     // show_nethash_chart: Determine whether to show the network hashrate chart configured in the shared_pages.network_charts.nethash_chart section across the top of this page (true/false)
@@ -1097,14 +1097,14 @@
       // blockhash: This value can be any valid block hash from your coins blockchain
       //            For many bitcoin clones you can use the following cmd to get the block hash for a given block height: coin-cli getblockhash 64152
       //            NOTE: This value is only used to build example api links on the api page from the /api/getblock api for example
-      "blockhash": "37981c0c48b8d48965376c8a42ece9a0838daadb93ff975cb091f57f8c2a5faa",
+      "blockhash": "f9f4ea4ae7f6ea4c55040ede2019ba0a53e262f46ec9bce3dcda2cb11f96fc52",
       // txhash: This value can be any valid transaction hash from your coins blockchain
       //         For many bitcoin clones you can use the following cmd to find a list of tx hashes for a given block hash: coin-cli getblock 000000001ba119a0f6d49ebabd83343b125d7ee3d3184b1b41d6a7f2051153eb
       //         NOTE: This value is only used to build example api links on the api page from the /api/getrawtransaction api for example
-      "txhash": "0ebbfaaf838cde7cf27b103bfbc15261602188ab63384dac2922c115bea1471f",
+      "txhash": "d22a1ba59a39cbd5904624933efb822c8baa121f97060c4cc9ea2f00a4bc6512",
       // address: This value can be any valid wallet address from your coins blockchain that has received at least 1 or more coin transactions
       //          NOTE: This value is only used to build example api links on the api page from the /ext/getaddress api for example
-      "address": "Pps2nuEbFRtWeYPpELAdrgvK6QekEayvk8"
+      "address": "nYRp3W82vFNJerdT3kqzKFM5zVXW8nYowj"
     },
     // public_apis: a collection of settings that pertain to the public api command system
     //              NOTE: Disabling any of these apis will remove the api definition from the api page and will return a "This method is disabled" msg if the api endpoint is called.

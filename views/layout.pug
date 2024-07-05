@@ -1275,13 +1275,13 @@ html(lang='en')
                       span.fa-regular.fa-address-card
                       span.margin-left-5 #{settings.locale.menu_claim_address}
                 li#mempool.nav-item
-                    a.nav-link(href='https://blockbook.pepeblocks.com/mempool' target='_self')
+                    a.nav-link(href='https://testnet-blockbook.pepeblocks.com/mempool' target='_self')
                       span.fa-solid.fa-memory
                       span.margin-left-5 #{settings.locale.menu_mempool}
-                li#wallet.nav-item
-                    a.nav-link(href='https://wallet.pepeblocks.com/' target='_self')
-                      span.fa-solid.fa-wallet
-                      span.margin-left-5 #{settings.locale.menu_wallet}
+                li#mainnet.nav-item
+                    a.nav-link(href='https://pepeblocks.com/' target='_self')
+                      span.fa-solid.fa-globe
+                      span.margin-left-5 #{settings.locale.menu_mainnet}
                 if settings.orphans_page.enabled == true
                   li#orphans.nav-item
                     a.nav-link(href='/orphans')
@@ -1403,10 +1403,10 @@ html(lang='en')
                   a.nav-link(href='https://blockbook.pepeblocks.com/mempool' target='_blank')
                     span.nav-icon.fa-solid.fa-memory
                     span.margin-left-5 #{settings.locale.menu_mempool}
-              li#wallet.nav-item(alt=settings.locale.menu_wallet, title=settings.locale.menu_wallet, data-bs-toggle='tooltip', data-bs-placement='right')
+              li#mainnet.nav-item(alt=settings.locale.menu_mainnet, title=settings.locale.menu_mainnet, data-bs-toggle='tooltip', data-bs-placement='right')
                   a.nav-link(href='https://wallet.pepeblocks.com/' target='_blank')
-                    span.nav-icon.fa-solid.fa-wallet
-                    span.margin-left-5 #{settings.locale.menu_wallet}
+                    span.nav-icon.fa-solid.fa-mainnet
+                    span.margin-left-5 #{settings.locale.menu_mainnet}
               if settings.orphans_page.enabled == true
                 li#orphans.nav-item(alt=settings.locale.menu_orphans, title=settings.locale.menu_orphans, data-bs-toggle='tooltip', data-bs-placement='right')
                   a.nav-link(href='/orphans')
