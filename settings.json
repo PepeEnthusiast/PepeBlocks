@@ -596,7 +596,7 @@
       "items_per_page": 10,
       // reload_table_seconds: The time in seconds to automatically reload the table data from the server
       //                       Set to 0 to disable automatic reloading of table data
-      "reload_table_seconds": 5
+      "reload_table_seconds": 30
     }
   },
 
@@ -783,7 +783,7 @@
       "items_per_page": 10,
       // reload_table_seconds: The time in seconds to automatically reload the table data from the server
       //                       Set to 0 to disable automatic reloading of table data
-      "reload_table_seconds": 5,
+      "reload_table_seconds": 30,
       // min_amount: The minimum number of coins that need to be received in a single transaction to show up on the movement page
       "min_amount": 10000000,
       // low low_warning_flag: Flag all transactions in yellow/orange that are sent with coin amounts above this value
