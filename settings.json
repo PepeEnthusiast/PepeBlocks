@@ -14,9 +14,9 @@
     // password: The MongoDB password
     "password": "epep",
     // database: The MongoDB database name (default: explorerdb)
-    "database": "explorerdb",
+    "database": "explorerdb_mainnet",
     // address: The MongoDB hostname. This should always be 'localhost' if connecting to a local instance, otherwise specify the ip address of a remote instance
-    "address": "localhost",
+    "address": "10.10.10.101",
     // port: The port # that MongoDB is configured to listen for requests on (default: 27017)
     "port": 27017
   },
@@ -24,9 +24,9 @@
   // wallet: a collection of settings that allow the explorer to connect to the coin wallet
   "wallet": {
     // host: The hostname or ip address of the wallet to connect to (default: localhost)
-    "host": "localhost",
+    "host": "10.10.10.100",
     // port: The port # that the wallet is configured to listen for RPC requests on (default: 51573 for Exor wallet)
-    "port": 22555,
+    "port": 33873,
     // username: The wallet RPC username
     "username": "pepe",
     // password: The wallet RPC password
@@ -596,7 +596,7 @@
       "items_per_page": 10,
       // reload_table_seconds: The time in seconds to automatically reload the table data from the server
       //                       Set to 0 to disable automatic reloading of table data
-      "reload_table_seconds": 5
+      "reload_table_seconds": 30
     }
   },
 
@@ -783,7 +783,7 @@
       "items_per_page": 10,
       // reload_table_seconds: The time in seconds to automatically reload the table data from the server
       //                       Set to 0 to disable automatic reloading of table data
-      "reload_table_seconds": 5,
+      "reload_table_seconds": 30,
       // min_amount: The minimum number of coins that need to be received in a single transaction to show up on the movement page
       "min_amount": 10000000,
       // low low_warning_flag: Flag all transactions in yellow/orange that are sent with coin amounts above this value
