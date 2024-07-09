@@ -657,7 +657,7 @@
     "genesis_tx": "0ebbfaaf838cde7cf27b103bfbc15261602188ab63384dac2922c115bea1471f",
     // show_op_return: Determine whether to decode and show OP_RETURN values that may have been embeddeded in a transaction
     //                 NOTE: Enabling this option will require a full reindex of the blockchain data before previously synced transactions can display the OP_RETURN value
-    "show_op_return": false
+    "show_op_return": true
   },
 
   // address_page: a collection of settings that pertain to the address page
