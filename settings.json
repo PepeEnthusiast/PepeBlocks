@@ -79,7 +79,7 @@
     //       NOTE: This value acts as a unique identifier for data stored in mongo and therefore cannot be changed without re-syncing all existing data.
     "name": "Pepecoin",
     // symbol: The cryptocurrency coin ticker/symbol value. This value is displayed anywhere that coin data is displayed including the index, address, block, movement, reward, richlist/top100 and tx pages
-    "symbol": "PEP"
+    "symbol": "PEPE"
   },
 
   // network_history: a collection of settings that controls saving of extra historical network data during a block sync
