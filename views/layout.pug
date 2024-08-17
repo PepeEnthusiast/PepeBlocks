@@ -1278,6 +1278,10 @@ html(lang='en')
                     a.nav-link(href='https://blockbook.pepeblocks.com/mempool' target='_self')
                       span.fa-solid.fa-memory
                       span.margin-left-5 #{settings.locale.menu_mempool}
+                li#testnet.nav-item
+                    a.nav-link(href='https://testnet.pepeblocks.com/' target='_self')
+                      span.fa-solid.fa-flask
+                      span.margin-left-5 #{settings.locale.menu_testnet}
                 li#wallet.nav-item
                     a.nav-link(href='https://wallet.pepeblocks.com/' target='_self')
                       span.fa-solid.fa-wallet
@@ -1403,6 +1407,10 @@ html(lang='en')
                   a.nav-link(href='https://blockbook.pepeblocks.com/mempool' target='_blank')
                     span.nav-icon.fa-solid.fa-memory
                     span.margin-left-5 #{settings.locale.menu_mempool}
+              li#testnet.nav-item(alt=settings.locale.menu_testnet, title=settings.locale.menu_testnet, data-bs-toggle='tooltip', data-bs-placement='right')
+                  a.nav-link(href='https://testnet.pepeblocks.com/' target='_blank')
+                    span.nav-icon.fa-solid.fa-flask
+                    span.margin-left-5 #{settings.locale.menu_testnet}
               li#wallet.nav-item(alt=settings.locale.menu_wallet, title=settings.locale.menu_wallet, data-bs-toggle='tooltip', data-bs-placement='right')
                   a.nav-link(href='https://wallet.pepeblocks.com/' target='_blank')
                     span.nav-icon.fa-solid.fa-wallet
