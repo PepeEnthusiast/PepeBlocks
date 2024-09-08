@@ -16,7 +16,7 @@
     // database: The MongoDB database name (default: explorerdb)
     "database": "explorerdb_mainnet",
     // address: The MongoDB hostname. This should always be 'localhost' if connecting to a local instance, otherwise specify the ip address of a remote instance
-    "address": "10.10.10.101",
+    "address": "localhost",
     // port: The port # that MongoDB is configured to listen for requests on (default: 27017)
     "port": 27017
   },
@@ -24,20 +24,20 @@
   // wallet: a collection of settings that allow the explorer to connect to the coin wallet
   "wallet": {
     // host: The hostname or ip address of the wallet to connect to (default: localhost)
-    "host": "10.10.10.100",
+    "host": "localhost",
     // port: The port # that the wallet is configured to listen for RPC requests on (default: 51573 for Exor wallet)
-    "port": 33873,
+    "port": 8038,
     // username: The wallet RPC username
-    "username": "pepe",
+    "username": "rpc",
     // password: The wallet RPC password
-    "password": "epep"
+    "password": "rpcp"
   },
 
   // webserver: a collection of settings that pertain to the node.js express web framework (read more: https://www.npmjs.com/package/express)
   "webserver": {
     // port: Port # to configure the express webserver to listen for http requests on
     //       NOTE: Be sure to configure firewalls to allow traffic through this port or the explorer website may not be accessible remotely
-    "port": 80,
+    "port": 9090,
     // tls: a collection of settings that pertain to the TLS (Transport Layer Security) protocol feature (aka: ssl or https)
     "tls": {
       // enabled: Enable/disable TLS

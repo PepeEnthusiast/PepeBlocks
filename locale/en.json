@@ -37,6 +37,7 @@
   "menu_network": "Network",
   "menu_claim_address": "Claim Address",
   "menu_mempool": "MemPool",
+  "menu_faucet": "Faucet",
   "menu_testnet": "Testnet",
   "menu_wallet": "Wallet [BETA]",
   "menu_orphans": "Orphaned Blocks",

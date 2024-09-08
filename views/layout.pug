@@ -1278,6 +1278,10 @@ html(lang='en')
                     a.nav-link(href='https://blockbook.pepeblocks.com/mempool' target='_self')
                       span.fa-solid.fa-memory
                       span.margin-left-5 #{settings.locale.menu_mempool}
+                li#faucet.nav-item
+                    a.nav-link(href='https://faucet.pepeblocks.com/' target='_self')
+                      span.fa-solid.fa-faucet
+                      span.margin-left-5 #{settings.locale.menu_faucet}
                 li#testnet.nav-item
                     a.nav-link(href='https://testnet.pepeblocks.com/' target='_self')
                       span.fa-solid.fa-flask
@@ -1407,6 +1411,10 @@ html(lang='en')
                   a.nav-link(href='https://blockbook.pepeblocks.com/mempool' target='_blank')
                     span.nav-icon.fa-solid.fa-memory
                     span.margin-left-5 #{settings.locale.menu_mempool}
+              li#faucet.nav-item(alt=settings.locale.menu_faucet, title=settings.locale.menu_faucet, data-bs-toggle='tooltip', data-bs-placement='right')
+                  a.nav-link(href='https://faucet.pepeblocks.com/' target='_blank')
+                    span.nav-icon.fa-solid.fa-faucet
+                    span.margin-left-5 #{settings.locale.menu_faucet}
               li#testnet.nav-item(alt=settings.locale.menu_testnet, title=settings.locale.menu_testnet, data-bs-toggle='tooltip', data-bs-placement='right')
                   a.nav-link(href='https://testnet.pepeblocks.com/' target='_blank')
                     span.nav-icon.fa-solid.fa-flask
