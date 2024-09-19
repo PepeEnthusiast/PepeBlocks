@@ -26,7 +26,7 @@
     // host: The hostname or ip address of the wallet to connect to (default: localhost)
     "host": "localhost",
     // port: The port # that the wallet is configured to listen for RPC requests on (default: 51573 for Exor wallet)
-    "port": 8038,
+    "port": 33873,
     // username: The wallet RPC username
     "username": "rpc",
     // password: The wallet RPC password
